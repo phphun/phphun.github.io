@@ -386,6 +386,18 @@ h6, .title-6 { font-size : 1.6rem; }
   bottom: 0;
 }
 
+.extended-semi-cover {
+  display: flex;
+  flex-direction: column;
+  min-height: 480px;
+}
+
+.extended-semi-cover > div {
+  margin: auto;
+  text-align: center;
+}
+
+
 /* Buttons */
 .std-button,
 .button {
@@ -488,6 +500,35 @@ h6, .title-6 { font-size : 1.6rem; }
   opacity: 1.0;
   margin-top: -52px;
   color: white;
+}
+
+.semi-footer h3 {
+  text-align: center;
+  font-weight: thin;
+  color: white;
+  background-color: black;
+  padding: 12px;
+  margin: 0;
+  font-size: 150%;
+}
+
+.semi-footer ul {
+  margin: 32px;
+}
+
+.semi-footer li {
+  list-style: none;
+  font-size: 120%;
+  padding: 8px;
+}
+
+.semi-footer li:before {
+  content:"·";
+  font-size:88px;
+  color: #A20D1E;
+  vertical-align:middle;
+  line-height:20px;
+  margin-right: 24px;
 }
 
 @media (min-width: 256px) {
