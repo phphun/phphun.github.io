@@ -1,0 +1,498 @@
+/* This stylesheet come from https://github.com/xvw/glitch.css */
+
+/* Metric and unit come from the excellent KNACSS 
+ * http://knacss.com/ (You should use it instead of this)
+ */
+
+/* External fonts */
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic,700);
+
+/* Box model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+/* Font formats */
+.sans-serif {
+  font-family: 'Droid Sans', sans-serif;
+}
+.serif {
+  font-family: 'Libre Baskerville', serif;
+}
+
+/* Presaved size */
+.full-width { width: 100%; } 
+
+/* Presaved background */
+.bg-yellowgreen { background-color: yellowgreen; }
+.bg-yellow { background-color: yellow; }
+.bg-whitesmoke { background-color: whitesmoke; }
+.bg-white { background-color: white; }
+.bg-wheat { background-color: wheat; }
+.bg-violet { background-color: violet; }
+.bg-turquoise { background-color: turquoise; }
+.bg-tomato { background-color: tomato; }
+.bg-thistle { background-color: thistle; }
+.bg-teal { background-color: teal; }
+.bg-tan { background-color: tan; }
+.bg-steelblue { background-color: steelblue; }
+.bg-springgreen { background-color: springgreen; }
+.bg-snow { background-color: snow; }
+.bg-slategray { background-color: slategray; }
+.bg-slateblue { background-color: slateblue; }
+.bg-skyblue { background-color: skyblue; }
+.bg-silver { background-color: silver; }
+.bg-sienna { background-color: sienna; }
+.bg-seashell { background-color: seashell; }
+.bg-seagreen { background-color: seagreen; }
+.bg-sandybrown { background-color: sandybrown; }
+.bg-salmon { background-color: salmon; }
+.bg-saddlebrown { background-color: saddlebrown; }
+.bg-royalblue { background-color: royalblue; }
+.bg-rosybrown { background-color: rosybrown; }
+.bg-red { background-color: red; }
+.bg-rebeccapurple { background-color: rebeccapurple; }
+.bg-purple { background-color: purple; }
+.bg-powderblue { background-color: powderblue; }
+.bg-plum { background-color: plum; }
+.bg-pink { background-color: pink; }
+.bg-peru { background-color: peru; }
+.bg-peachpuff { background-color: peachpuff; }
+.bg-papayawhip { background-color: papayawhip; }
+.bg-palevioletred { background-color: palevioletred; }
+.bg-paleturquoise { background-color: paleturquoise; }
+.bg-palegreen { background-color: palegreen; }
+.bg-palegoldenrod { background-color: palegoldenrod; }
+.bg-orchid { background-color: orchid; }
+.bg-orangered { background-color: orangered; }
+.bg-orange { background-color: orange; }
+.bg-olivedrab { background-color: olivedrab; }
+.bg-olive { background-color: olive; }
+.bg-oldlace { background-color: oldlace; }
+.bg-navy { background-color: navy; }
+.bg-navajowhite { background-color: navajowhite; }
+.bg-moccasin { background-color: moccasin; }
+.bg-mistyrose { background-color: mistyrose; }
+.bg-mintcream { background-color: mintcream; }
+.bg-midnightblue { background-color: midnightblue; }
+.bg-mediumvioletred { background-color: mediumvioletred; }
+.bg-mediumturquoise { background-color: mediumturquoise; }
+.bg-mediumspringgreen { background-color: mediumspringgreen; }
+.bg-mediumslateblue { background-color: mediumslateblue; }
+.bg-mediumseagreen { background-color: mediumseagreen; }
+.bg-mediumpurple { background-color: mediumpurple; }
+.bg-mediumorchid { background-color: mediumorchid; }
+.bg-mediumblue { background-color: mediumblue; }
+.bg-mediumaquamarine { background-color: mediumaquamarine; }
+.bg-maroon { background-color: maroon; }
+.bg-magenta { background-color: magenta; }
+.bg-linen { background-color: linen; }
+.bg-limegreen { background-color: limegreen; }
+.bg-lime { background-color: lime; }
+.bg-lightyellow { background-color: lightyellow; }
+.bg-lightsteelblue { background-color: lightsteelblue; }
+.bg-lightslategray { background-color: lightslategray; }
+.bg-lightskyblue { background-color: lightskyblue; }
+.bg-lightseagreen { background-color: lightseagreen; }
+.bg-lightsalmon { background-color: lightsalmon; }
+.bg-lightpink { background-color: lightpink; }
+.bg-lightgreen { background-color: lightgreen; }
+.bg-lightgray { background-color: lightgray; }
+.bg-lightgoldenrodyellow { background-color: lightgoldenrodyellow; }
+.bg-lightcyan { background-color: lightcyan; }
+.bg-lightcoral { background-color: lightcoral; }
+.bg-lightblue { background-color: lightblue; }
+.bg-lemonchiffon { background-color: lemonchiffon; }
+.bg-lawngreen { background-color: lawngreen; }
+.bg-lavenderblush { background-color: lavenderblush; }
+.bg-lavender { background-color: lavender; }
+.bg-khaki { background-color: khaki; }
+.bg-ivory { background-color: ivory; }
+.bg-indigo { background-color: indigo; }
+.bg-indianred { background-color: indianred; }
+.bg-hotpink { background-color: hotpink; }
+.bg-honeydew { background-color: honeydew; }
+.bg-greenyellow { background-color: greenyellow; }
+.bg-green { background-color: green; }
+.bg-gray { background-color: gray; }
+.bg-goldenrod { background-color: goldenrod; }
+.bg-gold { background-color: gold; }
+.bg-ghostwhite { background-color: ghostwhite; }
+.bg-gainsboro { background-color: gainsboro; }
+.bg-fuchsia { background-color: fuchsia; }
+.bg-forestgreen { background-color: forestgreen; }
+.bg-floralwhite { background-color: floralwhite; }
+.bg-firebrick { background-color: firebrick; }
+.bg-dodgerblue { background-color: dodgerblue; }
+.bg-dimgray { background-color: dimgray; }
+.bg-deepskyblue { background-color: deepskyblue; }
+.bg-deeppink { background-color: deeppink; }
+.bg-darkviolet { background-color: darkviolet; }
+.bg-darkturquoise { background-color: darkturquoise; }
+.bg-darkslategray { background-color: darkslategray; }
+.bg-darkslateblue { background-color: darkslateblue; }
+.bg-darkseagreen { background-color: darkseagreen; }
+.bg-darksalmon { background-color: darksalmon; }
+.bg-darkred { background-color: darkred; }
+.bg-darkorchid { background-color: darkorchid; }
+.bg-darkorange { background-color: darkorange; }
+.bg-darkolivegreen { background-color: darkolivegreen; }
+.bg-darkmagenta { background-color: darkmagenta; }
+.bg-darkkhaki { background-color: darkkhaki; }
+.bg-darkgreen { background-color: darkgreen; }
+.bg-darkgray { background-color: darkgray; }
+.bg-darkgoldenrod { background-color: darkgoldenrod; }
+.bg-darkcyan { background-color: darkcyan; }
+.bg-darkblue { background-color: darkblue; }
+.bg-cyan { background-color: cyan; }
+.bg-crimson { background-color: crimson; }
+.bg-cornsilk { background-color: cornsilk; }
+.bg-cornflowerblue { background-color: cornflowerblue; }
+.bg-coral { background-color: coral; }
+.bg-chocolate { background-color: chocolate; }
+.bg-chartreuse { background-color: chartreuse; }
+.bg-cadetblue { background-color: cadetblue; }
+.bg-burlywood { background-color: burlywood; }
+.bg-brown { background-color: brown; }
+.bg-blueviolet { background-color: blueviolet; }
+.bg-blue { background-color: blue; }
+.bg-blanchedalmond { background-color: blanchedalmond; }
+.bg-black { background-color: black; }
+.bg-bisque { background-color: bisque; }
+.bg-beige { background-color: beige; }
+.bg-azure { background-color: azure; }
+.bg-aquamarine { background-color: aquamarine; }
+.bg-aqua { background-color: aqua; }
+.bg-antiquewhite { background-color: antiquewhite; }
+.bg-aliceblue { background-color: aliceblue; }
+
+/* Presaved colors */
+.font-yellowgreen { color: yellowgreen; }
+.font-yellow { color: yellow; }
+.font-whitesmoke { color: whitesmoke; }
+.font-white { color: white; }
+.font-wheat { color: wheat; }
+.font-violet { color: violet; }
+.font-turquoise { color: turquoise; }
+.font-tomato { color: tomato; }
+.font-thistle { color: thistle; }
+.font-teal { color: teal; }
+.font-tan { color: tan; }
+.font-steelblue { color: steelblue; }
+.font-springgreen { color: springgreen; }
+.font-snow { color: snow; }
+.font-slategray { color: slategray; }
+.font-slateblue { color: slateblue; }
+.font-skyblue { color: skyblue; }
+.font-silver { color: silver; }
+.font-sienna { color: sienna; }
+.font-seashell { color: seashell; }
+.font-seagreen { color: seagreen; }
+.font-sandybrown { color: sandybrown; }
+.font-salmon { color: salmon; }
+.font-saddlebrown { color: saddlebrown; }
+.font-royalblue { color: royalblue; }
+.font-rosybrown { color: rosybrown; }
+.font-red { color: red; }
+.font-rebeccapurple { color: rebeccapurple; }
+.font-purple { color: purple; }
+.font-powderblue { color: powderblue; }
+.font-plum { color: plum; }
+.font-pink { color: pink; }
+.font-peru { color: peru; }
+.font-peachpuff { color: peachpuff; }
+.font-papayawhip { color: papayawhip; }
+.font-palevioletred { color: palevioletred; }
+.font-paleturquoise { color: paleturquoise; }
+.font-palegreen { color: palegreen; }
+.font-palegoldenrod { color: palegoldenrod; }
+.font-orchid { color: orchid; }
+.font-orangered { color: orangered; }
+.font-orange { color: orange; }
+.font-olivedrab { color: olivedrab; }
+.font-olive { color: olive; }
+.font-oldlace { color: oldlace; }
+.font-navy { color: navy; }
+.font-navajowhite { color: navajowhite; }
+.font-moccasin { color: moccasin; }
+.font-mistyrose { color: mistyrose; }
+.font-mintcream { color: mintcream; }
+.font-midnightblue { color: midnightblue; }
+.font-mediumvioletred { color: mediumvioletred; }
+.font-mediumturquoise { color: mediumturquoise; }
+.font-mediumspringgreen { color: mediumspringgreen; }
+.font-mediumslateblue { color: mediumslateblue; }
+.font-mediumseagreen { color: mediumseagreen; }
+.font-mediumpurple { color: mediumpurple; }
+.font-mediumorchid { color: mediumorchid; }
+.font-mediumblue { color: mediumblue; }
+.font-mediumaquamarine { color: mediumaquamarine; }
+.font-maroon { color: maroon; }
+.font-magenta { color: magenta; }
+.font-linen { color: linen; }
+.font-limegreen { color: limegreen; }
+.font-lime { color: lime; }
+.font-lightyellow { color: lightyellow; }
+.font-lightsteelblue { color: lightsteelblue; }
+.font-lightslategray { color: lightslategray; }
+.font-lightskyblue { color: lightskyblue; }
+.font-lightseagreen { color: lightseagreen; }
+.font-lightsalmon { color: lightsalmon; }
+.font-lightpink { color: lightpink; }
+.font-lightgreen { color: lightgreen; }
+.font-lightgray { color: lightgray; }
+.font-lightgoldenrodyellow { color: lightgoldenrodyellow; }
+.font-lightcyan { color: lightcyan; }
+.font-lightcoral { color: lightcoral; }
+.font-lightblue { color: lightblue; }
+.font-lemonchiffon { color: lemonchiffon; }
+.font-lawngreen { color: lawngreen; }
+.font-lavenderblush { color: lavenderblush; }
+.font-lavender { color: lavender; }
+.font-khaki { color: khaki; }
+.font-ivory { color: ivory; }
+.font-indigo { color: indigo; }
+.font-indianred { color: indianred; }
+.font-hotpink { color: hotpink; }
+.font-honeydew { color: honeydew; }
+.font-greenyellow { color: greenyellow; }
+.font-green { color: green; }
+.font-gray { color: gray; }
+.font-goldenrod { color: goldenrod; }
+.font-gold { color: gold; }
+.font-ghostwhite { color: ghostwhite; }
+.font-gainsboro { color: gainsboro; }
+.font-fuchsia { color: fuchsia; }
+.font-forestgreen { color: forestgreen; }
+.font-floralwhite { color: floralwhite; }
+.font-firebrick { color: firebrick; }
+.font-dodgerblue { color: dodgerblue; }
+.font-dimgray { color: dimgray; }
+.font-deepskyblue { color: deepskyblue; }
+.font-deeppink { color: deeppink; }
+.font-darkviolet { color: darkviolet; }
+.font-darkturquoise { color: darkturquoise; }
+.font-darkslategray { color: darkslategray; }
+.font-darkslateblue { color: darkslateblue; }
+.font-darkseagreen { color: darkseagreen; }
+.font-darksalmon { color: darksalmon; }
+.font-darkred { color: darkred; }
+.font-darkorchid { color: darkorchid; }
+.font-darkorange { color: darkorange; }
+.font-darkolivegreen { color: darkolivegreen; }
+.font-darkmagenta { color: darkmagenta; }
+.font-darkkhaki { color: darkkhaki; }
+.font-darkgreen { color: darkgreen; }
+.font-darkgray { color: darkgray; }
+.font-darkgoldenrod { color: darkgoldenrod; }
+.font-darkcyan { color: darkcyan; }
+.font-darkblue { color: darkblue; }
+.font-cyan { color: cyan; }
+.font-crimson { color: crimson; }
+.font-cornsilk { color: cornsilk; }
+.font-cornflowerblue { color: cornflowerblue; }
+.font-coral { color: coral; }
+.font-chocolate { color: chocolate; }
+.font-chartreuse { color: chartreuse; }
+.font-cadetblue { color: cadetblue; }
+.font-burlywood { color: burlywood; }
+.font-brown { color: brown; }
+.font-blueviolet { color: blueviolet; }
+.font-blue { color: blue; }
+.font-blanchedalmond { color: blanchedalmond; }
+.font-black { color: black; }
+.font-bisque { color: bisque; }
+.font-beige { color: beige; }
+.font-azure { color: azure; }
+.font-aquamarine { color: aquamarine; }
+.font-aqua { color: aqua; }
+.font-antiquewhite { color: antiquewhite; }
+.font-aliceblue { color: aliceblue; }
+
+/* Rewrite base CSS behaviour */
+html {
+  font-family: 'Droid Sans', sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-size: 1.4rem;
+  background-color: #FFF;
+  color: #000;
+  font-family: 'Droid Sans', sans-serif;
+  line-height: 1.5;
+  height: 100%;
+}
+
+/* Title */
+h1, .title-1 { font-size : 3.2rem; }
+h2, .title-2 { font-size : 2.8rem; }
+h3, .title-3 { font-size : 2.4rem; }
+h4, .title-4 { font-size : 2.0rem; }
+h5, .title-5 { font-size : 1.8rem; }
+h6, .title-6 { font-size : 1.6rem; }
+
+/* Decorated input */
+.extend-input { display: flex;}
+.extend-input > .extension  {}
+.extend-input > .field { flex: 1;}
+
+/* Site architecture */
+.landing-layout {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.landing-layout > .content { flex: 1; }
+
+/* Landing element */
+.cover,
+.landing,
+.landing-grid {
+  width: 100%;
+  display: flex;
+}
+
+.cover,
+.landing {
+  align-items: stretch;
+  flex-direction: column;
+}
+
+.cover > *,
+.landing > *,
+.landing-grid > * {
+  margin : auto;
+  text-align: center;
+}
+
+.cover {
+  height: 100%;
+}
+
+.extended-cover {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+/* Buttons */
+.std-button,
+.button {
+  text-decoration: none;
+  padding: 6px;
+  border-radius: 4px;
+  margin: 4px;
+}
+
+.std-button {
+  background-color: #e0e1e2;
+  color: #666;
+  font-weight: thin;
+  transition: all 0.2s ease;
+}
+
+.std-button:hover {
+  background-color: #c0c0c0;
+  color: #000;
+}
+
+/* tables */
+.row {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.row > * {
+  display: table-cell;
+  vertical-align: top;
+}
+
+/* Small flex grid */
+
+.grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid > * {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: stretch;
+}
+
+.grid > * > * { flex: 1; }
+.grid > .line-full  > *   { flex: 0 0 100%;    }
+.grid > .line-two   > *   { flex: 0 0 50%;     }
+.grid > .line-three > *   { flex: 0 0 33.3333%;}
+.grid > .line-four  > *   { flex: 0 0 25%;     }
+
+.flex-1 { flex: 1; }
+.flex-2 { flex: 2; }
+.flex-3 { flex: 3; }
+.flex-4 { flex: 4; }
+.flex-5 { flex: 5; }
+.flex-6 { flex: 6; }
+
+
+.phun-title {
+  background-color: #A20D1E;
+  color: #FFF;
+}
+
+.phun-title h1 {
+  color: #FFF;
+  fon-weight: 900;
+  font-size: 400%;
+}
+
+.phun-title a {
+  margin: 32px;
+  display: block;
+  background-color:  #A20D1E;
+  border: 3px solid white;
+  color: white;
+}
+
+.phun-title a:hover {
+  background-color: white;
+  color: #A20D1E;
+  margin: 48px;
+}
+
+@media (min-width: 256px) {
+  .grid > * > *,
+  .grid > .line-full  > *   { flex: 0 0 100%;    }
+  .grid > .line-two   > *   { flex: 0 0 100%;    }
+  .grid > .line-three > *   { flex: 0 0 100%;    }
+  .grid > .line-four  > *   { flex: 0 0 100%;    }
+}
+
+@media (min-width: 640px) {
+  .grid > * > * { flex: 1; }
+  .grid > .line-full  > *   { flex: 0 0 100%;    }
+  .grid > .line-two   > *   { flex: 0 0 50%;     }
+  .grid > .line-three > *   { flex: 0 0 33.333%; }
+  .grid > .line-four  > *   { flex: 0 0 100%;    }
+}
+
+@media (min-width: 48em) {
+  .grid > * > * { flex: 1; }
+  .grid > .line-full  > *   { flex: 0 0 100%;    }
+  .grid > .line-two   > *   { flex: 0 0 50%;     }
+  .grid > .line-three > *   { flex: 0 0 33.3333%;}
+  .grid > .line-four  > *   { flex: 0 0 25%;     }
+}
